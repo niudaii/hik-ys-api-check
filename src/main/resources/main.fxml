@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<TabPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+         minWidth="-Infinity"
+         prefHeight="533.0" prefWidth="785.0" tabClosingPolicy="UNAVAILABLE"
+         xmlns="http://javafx.com/javafx/8" fx:controller="controller.MainController">
+    <tabs>
+        <Tab text="海康威视">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Text layoutX="52.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="ArtemisConfig.host"/>
+                        <Text layoutX="52.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="ArtemisConfig.appKey"/>
+                        <Text layoutX="52.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="ArtemisConfig.appSecret"/>
+                        <TextField fx:id="hikHost" layoutX="204.0" layoutY="19.0" prefHeight="27.0" prefWidth="428.0"/>
+                        <TextField fx:id="hikAppKey" layoutX="204.0" layoutY="56.0" prefHeight="27.0"
+                                   prefWidth="428.0"/>
+                        <TextField fx:id="hikAppSecret" layoutX="204.0" layoutY="93.0" prefHeight="27.0"
+                                   prefWidth="428.0"/>
+                        <Button layoutX="675.0" layoutY="19.0" mnemonicParsing="false"
+                                onAction="#checkHik" text="检测"/>
+                        <TextArea fx:id="hikResult" layoutX="45.0" layoutY="188.0" prefHeight="283.0"
+                                  prefWidth="695.0"/>
+                        <Button fx:id="hikSearch" disable="true" layoutX="675.0" layoutY="56.0" mnemonicParsing="false"
+                                onAction="#searchHik" text="搜索"/>
+                        <Text layoutX="52.0" layoutY="148.0" strokeType="OUTSIDE" strokeWidth="0.0"
+                              text="CameraIndexCode"/>
+                        <TextField fx:id="hikCameraIndexCode" layoutX="204.0" layoutY="133.0" prefHeight="27.0"
+                                   prefWidth="428.0"/>
+                        <Button fx:id="hikPreview" disable="true" layoutX="675.0" layoutY="133.0"
+                                mnemonicParsing="false" onAction="#previewHik" text="预览"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+        <Tab text="萤石">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                    <children>
+                        <Text layoutX="52.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="appKey"/>
+                        <Text layoutX="52.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text="appSecret"/>
+                        <TextField fx:id="ysAppKey" layoutX="130.0" layoutY="19.0" prefHeight="27.0" prefWidth="428.0"/>
+                        <TextField fx:id="ysAppSecret" layoutX="130.0" layoutY="56.0" prefHeight="21.0"
+                                   prefWidth="426.0"/>
+                        <Button layoutX="601.0" layoutY="19.0" mnemonicParsing="false"
+                                onAction="#checkYs" text="检测"/>
+                        <TextArea fx:id="ysResult" layoutX="46.0" layoutY="150.0" prefHeight="317.0" prefWidth="698.0"/>
+                        <Button fx:id="ysSearch" disable="true" layoutX="601.0" layoutY="93.0" mnemonicParsing="false"
+                                onAction="#searchYs" text="搜索"/>
+                        <Text layoutX="52.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="accessToken"/>
+                        <TextField fx:id="ysAccessToken" layoutX="131.0" layoutY="93.0" prefHeight="18.0"
+                                   prefWidth="425.0"/>
+                    </children>
+                </AnchorPane>
+            </content>
+        </Tab>
+    </tabs>
+</TabPane>
